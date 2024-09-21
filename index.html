@@ -14,7 +14,11 @@
         <div class="page-container">
             <div class="header">
                 <div class="header-top">
-                    <input class="searchbar" type="text">
+                    <div class="search-flex">
+                        <img src="./svg/magnify.svg">
+                        <input class="searchbar" type="text">
+                    </div>
+                    
 
                     <div class="user-info">
                         <button class="notif-button"></button>
@@ -25,7 +29,7 @@
 
                 <div class="header-bottom">
                     <div class="greeting">
-                        <img src="" alt="profile picture">
+                        <img class="greeting-profile-image" src="./images/sparkle.jpg" alt="profile picture">
 
                         <div class="greeting-text">
                             <p class="greeting-small">
@@ -47,25 +51,27 @@
 
             <div class="sidebar">
                 <a class="dash" href="">
-                    <!-- SVG dash icon -->
+                    <img style="height: 60px; filter: invert(100%)" src="./svg/view-dashboard.svg">
                     Dashboard
                 </a>
 
-                <ul class="navigation">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Profile</a></li>
-                    <li><a href="">Messages</a></li>
-                    <li><a href="">History</a></li>
-                    <li><a href="">Tasks</a></li>
-                    <li><a href="">Communities</a></li>
-                </ul>
-
-                <ul class="branding">
-                    <li><a href="">Settings</a></li>
-                    <li><a href="">Support</a></li>
-                    <li><a href="">Privacy</a></li>
-                </ul>
+                <nav class="nav">
+                    <ul class="site-nav">
+                        <li><img class="sidebar-svg" src="./svg/home.svg"><a href="">Home</a></li>
+                        <li><img class="sidebar-svg" src="./svg/card-account-details-outline.svg"><a href="">Profile</a></li>
+                        <li><img class="sidebar-svg" src="./svg/message-reply.svg"><a href="">Messages</a></li>
+                        <li><img class="sidebar-svg" src="./svg/history.svg"><a href="">History</a></li>
+                        <li><img class="sidebar-svg" src="./svg/file-document-multiple.svg"><a href="">Tasks</a></li>
+                        <li><img class="sidebar-svg" src="./svg/account-group.svg"><a href="">Communities</a></li>
+                    </ul>
+                    <ul class="settings-nav">
+                        <li><img class="sidebar-svg" src="./svg/cog.svg"><a href="">Settings</a></li>
+                        <li><img class="sidebar-svg" src="./svg/help-box.svg"><a href="">Support</a></li>
+                        <li><img class="sidebar-svg" src="./svg/shield-check.svg"><a href="">Privacy</a></li>
+                    </ul>
+                </nav>
             </div>
+
             <div class="main">
                 <div class="projects">
                     Your Projects
@@ -73,8 +79,7 @@
                         <div class="card">
                             <h3 class="project-card-title">Super Cool Project</h3>
                             <p class="project-card-desc">Duis aute irure dolor in reprehenderit in voluptate 
-                                velit esse cillum dolore eu fugiat nulla pariatur. 
-                                Excepteur sint occaecat cupidatat non proident</p>
+                                velit esse cillum dolore eu fugiat</p>
                             <div class="card-buttons">
                                 <button class="card-favorite-button">
                                     <img src="./svg/star-plus-outline.svg">
@@ -90,6 +95,23 @@
                         <div class="card">
                             <h3 class="project-card-title">Super Cool Project</h3>
                             <p class="project-card-desc">Duis aute irure dolor in reprehenderit in voluptate 
+                                velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+                            <div class="card-buttons">
+                                <button class="card-favorite-button">
+                                    <img src="./svg/star-plus-outline.svg">
+                                </button>
+                                <button class="card-watch-button">
+                                    <img src="./svg/eye-plus-outline.svg">
+                                </button>
+                                <button class="card-share-button">
+                                    <img src="./svg/share-variant-outline.svg">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="project-card-title">Super Cool Project</h3>
+                            <p class="project-card-desc">reprehenderit in voluptate 
                                 velit esse cillum dolore eu fugiat nulla pariatur. 
                                 Excepteur sint occaecat cupidatat non proident</p>
 
@@ -107,8 +129,7 @@
                         </div>
                         <div class="card">
                             <h3 class="project-card-title">Super Cool Project</h3>
-                            <p class="project-card-desc">Duis aute irure dolor in reprehenderit in voluptate 
-                                velit esse cillum dolore eu fugiat nulla pariatur. 
+                            <p class="project-card-desc">eu fugiat nulla pariatur. 
                                 Excepteur sint occaecat cupidatat non proident</p>
 
                             <div class="card-buttons">
@@ -125,9 +146,7 @@
                         </div>
                         <div class="card">
                             <h3 class="project-card-title">Super Cool Project</h3>
-                            <p class="project-card-desc">Duis aute irure dolor in reprehenderit in voluptate 
-                                velit esse cillum dolore eu fugiat nulla pariatur. 
-                                Excepteur sint occaecat cupidatat non proident</p>
+                            <p class="project-card-desc">cupidatat non proident</p>
 
                             <div class="card-buttons">
                                 <button class="card-favorite-button">
@@ -144,26 +163,7 @@
                         <div class="card">
                             <h3 class="project-card-title">Super Cool Project</h3>
                             <p class="project-card-desc">Duis aute irure dolor in reprehenderit in voluptate 
-                                velit esse cillum dolore eu fugiat nulla pariatur. 
-                                Excepteur sint occaecat cupidatat non proident</p>
-
-                            <div class="card-buttons">
-                                <button class="card-favorite-button">
-                                    <img src="./svg/star-plus-outline.svg">
-                                </button>
-                                <button class="card-watch-button">
-                                    <img src="./svg/eye-plus-outline.svg">
-                                </button>
-                                <button class="card-share-button">
-                                    <img src="./svg/share-variant-outline.svg">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h3 class="project-card-title">Super Cool Project</h3>
-                            <p class="project-card-desc">Duis aute irure dolor in reprehenderit in voluptate 
-                                velit esse cillum dolore eu fugiat nulla pariatur. 
-                                Excepteur sint occaecat cupidatat non proident</p>
+                                velit esse cillum dolore eu fugiat</p>
                             <div class="card-buttons">
                                 <button class="card-favorite-button">
                                     <img src="./svg/star-plus-outline.svg">
@@ -208,7 +208,34 @@
                 <div class="trending">
                     Trending
                     <div class="trending-grid">
-
+                        <div class="trending-project">
+                            <img src="./images/dummy_profile_pic_1.png">
+                            <div class="trending-project-desc">
+                                <h4>@tegan</h4>
+                                <p>World Peace Builder</p>
+                            </div>
+                        </div>
+                        <div class="trending-project">
+                            <img src="./images/dummy_profile_pic_2.jpg">
+                            <div class="trending-project-desc">
+                                <h4>@morgan</h4>
+                                <p>Super Cool Project</p>
+                            </div>
+                        </div>
+                        <div class="trending-project">
+                            <img src="./images/dummy_profile_pic_3.jpg">
+                            <div class="trending-project-desc">
+                                <h4>@kendall</h4>
+                                <p>Life Changing App</p>
+                            </div>
+                        </div>
+                        <div class="trending-project">
+                            <img src="./images/dummy_profile_pic_4.jpg">
+                            <div class="trending-project-desc">
+                                <h4>@alex</h4>
+                                <p>No Traffic Maker</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
