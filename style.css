@@ -1,22 +1,37 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 210px;
+    --sidebar-width: 350px;
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     font-family: Roboto;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .page-container {   
     height: 100%;
     display: grid;
-    grid-template-columns: 350px 1fr;
-    grid-template-rows: 210px 1fr;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-rows: var(--header-height) 1fr;
 }
 
 .main {
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(225, 231, 236);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 50% 50%;
+    padding: 40px 25px;
+    height: calc(100vh - var(--header-height));
 }
 
 .sidebar {
@@ -51,6 +66,8 @@ body {
     grid-template-rows: 1fr 1fr;
     padding-left: 50px;
     padding-right: 50px;
+    box-shadow: 2px 5px 5px rgb(202, 202, 202);
+    position: relative;
 }
 
 .header-top {
@@ -60,29 +77,163 @@ body {
 }
 
 .header-top > .searchbar {
-    width: 66%;
+    width: 60%;
     height: 35px;
     border-radius: 20px;
     border: none; 
     padding-left: 15px;
     padding-right: 15px;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(225, 231, 236);
     font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .header-top > .searchbar:focus-visible {
     outline: none;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(216, 223, 231);
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greeting {
+    display: flex;
+    gap: 15px;
 }
 
 .user-info {
     display: flex;
     align-items: center;
     gap: 20px;
+    padding-right: 15px;
 }
 
 .user-info > button {
     border-radius: 50%;
     border: none; 
     padding: 25px;
+}
+
+.profile-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.header-buttons > button {
+    color: white; 
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgb(18, 137, 216);
+    border-radius: 30px;
+    border: none;
+    padding: 12px 25px;
+}
+
+.projects,
+.announcements,
+.trending {
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+.projects {
+    margin-right: 30px;
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+}
+
+.projects-grid {
+    margin-top: 15px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%/2, max(64px, 100%/3)), 1fr));
+    gap: 30px;
+}
+
+.project-card-desc {
+    color: rgb(102, 102, 102)
+}
+
+.card {
+    background-color: white;
+    border-left: 10px solid rgb(240, 184, 0);
+    border-radius: 10px;
+    height: 250px;
+    width: 400px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    font-size: 1.2rem;
+    font-weight:400;
+    padding: 40px 30px 10px 30px;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+}
+
+.card-favorite-button,
+.card-watch-button,
+.card-share-button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: transparent;
+    filter: invert(30%);
+}
+
+.card,
+.announcements-grid,
+.trending-grid {
+    box-shadow: 5px 5px 5px rgb(201, 201, 201);
+}
+
+.announcements-grid {
+    background-color: white;
+    border-radius: 10px;
+    height: calc(100% - 45px);
+    margin-top: 15px; 
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 40px;
+}
+
+.announcements-grid * {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.trending {
+    margin-top: 45px;
+}
+
+.trending-grid {
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    margin-top: 15px; 
+    height: calc(100% - 67px);
+}
+
+.announcement {
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    p {
+        color: rgb(109, 109, 109);
+        font-size: 1rem;
+        font-weight: 400;
+    }
 }
